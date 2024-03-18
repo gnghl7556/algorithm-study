@@ -1,8 +1,8 @@
 # algorithm-study
-알고리즘 스터디를 위한 레포지토리
+알고리즘 스터디를 위한 레포지토리<br>
 코딩실력 재활운동을 위해 하루 1~2시간씩 알고리즘 스터디를 진행한다.
 
-## Programming LAnguage
+## Programming Lㅁnguage
 - Swift, Java, Python
 
 ## 알고리즘 사이트
