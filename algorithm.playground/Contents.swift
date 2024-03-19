@@ -26,3 +26,18 @@ func solution003_1(_ my_string: String,_ n:Int) -> String {
     return String(subString)
 }
 print(solution003_1("ProgrammerS123", 11))
+
+/// 004 카운트 업
+func solution004(_ start_num:Int, _ end_num:Int) -> [Int] {
+    return Array(start_num...end_num)
+}
+print(solution004(3, 10))
+
+func solution004_1(_ start_num:Int, _ end_num:Int) -> [Int] {
+    var result:[Int] = []
+    for a in start_num...end_num {
+        result.append(a)
+    }
+    return result
+}
+print(solution004_1(3, 10))
