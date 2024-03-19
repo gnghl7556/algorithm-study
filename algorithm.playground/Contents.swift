@@ -160,3 +160,15 @@ func solution007_1(_ n:Int,_ control:String) -> Int {
     return result
 }
 print(solution007_1(0, "wsdawsdassw"))
+
+/// 008. 길이에 따른 연산
+func solution008(_ num_list:[Int]) -> Int {
+    var result = 0
+    if num_list.count >= 11 {
+        result = num_list.reduce(0, +)
+    }else{
+        result = num_list.reduce(1, *)
+    }
+    return result
+}
+print(solution008([3, 4, 5, 2, 5, 4, 6, 7, 3, 7, 2, 2, 1]))
