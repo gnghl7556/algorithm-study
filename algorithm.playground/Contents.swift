@@ -122,3 +122,41 @@ func solution006_2(_ arr:[Int]) -> [Int] {
     }
 }
 print(solution006_2([1,2,3,100,99,98]))
+
+/// 007. 수 조작하기1
+func solution007(_ n:Int,_ control:String) -> Int {
+    var result = n
+    for element in control {
+        if element == "w" {
+            result += 1
+        }else if element == "s"{
+            result -= 1
+        }else if element == "d"{
+            result += 10
+        }else {
+            result -= 10
+        }
+    }
+    return result
+}
+print(solution007(0, "wsdawsdassw"))
+
+func solution007_1(_ n:Int,_ control:String) -> Int {
+    var result = n
+    for element in control {
+        switch element {
+        case "w" :
+            result += 1
+        case "s" :
+            result -= 1
+        case "d" :
+            result += 10
+        case "a" :
+            result -= 10
+        default:
+            break
+        }
+    }
+    return result
+}
+print(solution007_1(0, "wsdawsdassw"))
