@@ -41,3 +41,35 @@ func solution004_1(_ start_num:Int, _ end_num:Int) -> [Int] {
     return result
 }
 print(solution004_1(3, 10))
+
+/// 005 n번째 원소부터
+func solution005(_ num_list:[Int],_ n:Int) -> [Int] {
+    let index = num_list.index(num_list.startIndex, offsetBy: n-1)
+    return Array(num_list[index...])
+}
+print(solution005([5,2,1,7,5], 2))
+func solution005_1(_ num_list:[Int],_ n:Int) -> [Int] {
+    return Array(num_list[(n-1)...])
+}
+print(solution005_1([5,2,1,7,5], 2))
+
+func solution005_chatGPT(_ num_list: [Int], _ n: Int) -> [Int] {
+    // n이 1부터 시작한다고 가정하고, Swift의 배열 인덱스에 맞게 n에서 1을 빼줍니다.
+    // Swift의 배열 인덱스는 0부터 시작하기 때문입니다.
+    let startIndex = n - 1
+    
+    // 유효성 검사: n이 num_list의 범위 내에 있는지 확인합니다.
+    guard startIndex < num_list.count else {
+        // n이 배열의 크기를 초과하는 경우, 빈 배열을 반환합니다.
+        return []
+    }
+    
+    // n번째 원소부터 마지막 원소까지 슬라이싱하여 반환합니다.
+    return Array(num_list[startIndex...])
+}
+
+// 사용 예시
+let num_list = [1, 2, 3, 4, 5]
+let n = 3
+let result = solution005_chatGPT(num_list, n)
+print(result) // 출력: [3, 4, 5]
