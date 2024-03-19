@@ -73,3 +73,52 @@ let num_list = [1, 2, 3, 4, 5]
 let n = 3
 let result = solution005_chatGPT(num_list, n)
 print(result) // 출력: [3, 4, 5]
+
+/// 006 조건에 맞게 수열 변환하기1
+func solution006(_ arr:[Int]) -> [Int] {
+    var result:[Int] = []
+    for element in arr {
+        if element >= 50{
+            if element % 2 == 0 {
+                result.append(element / 2)
+            }else {
+                result.append(element)
+            }
+        }else if element % 2 != 0{
+            result.append(element*2)
+        }else{
+            result.append(element)
+        }
+    }
+    return result
+}
+print(solution006([1,2,3,100,99,98]))
+
+func solution006_1(_ arr:[Int]) -> [Int] {
+    var result:[Int] = []
+    for element in arr {
+        if element >= 50 && element % 2 == 0{
+            result.append(element / 2)
+        }else if element < 50 && element % 2 != 0{
+            result.append(element*2)
+        }else{
+            result.append(element)
+        }
+    }
+    return result
+}
+print(solution006_1([1,2,3,100,99,98]))
+
+func solution006_2(_ arr:[Int]) -> [Int] {
+    return arr.map { element in
+        if element >= 50 && element % 2 == 0 {
+            return element / 2
+        }
+        else if element < 50 && element % 2 != 0 {
+            return element * 2
+        }else{
+            return element
+        }
+    }
+}
+print(solution006_2([1,2,3,100,99,98]))
