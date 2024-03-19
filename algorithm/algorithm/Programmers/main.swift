@@ -17,3 +17,4 @@ func solution1(_ n:Int)-> String{
     return String(n)
 }
 print(solution1(10))
+
