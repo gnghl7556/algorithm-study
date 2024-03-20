@@ -216,3 +216,17 @@ func solution012_1(_ my_string:String,_ n:Int) -> String {
     return String(my_string.suffix(n))
 }
 print(solution012_1("ProgrammerS123", 19))
+
+/// 013. 배열 비교하기
+func solution013(_ arr1:[Int],_ arr2:[Int]) -> Int{
+    if arr1.count != arr2.count {
+        return arr1.count > arr2.count ? 1 : -1
+    }else {
+        let num1 = arr1.reduce(0,+)
+        let num2 = arr2.reduce(0,+)
+        return num1 > num2 ? 1 : num1 == num2 ? 0 : -1
+    }
+}
+print(solution013([49, 13], [70,11,2]))
+print(solution013([100,17,84,1], [55,12,65,36]))
+print(solution013([1,2,3,4,5], [3,3,3,3,3]))
