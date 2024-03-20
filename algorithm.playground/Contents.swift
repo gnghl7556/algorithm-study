@@ -240,3 +240,23 @@ func solution014(_ my_string:String, _ n:Int) -> String {
     return resultStr
 }
 print(solution014("string", 3))
+func solution014_1(_ my_string:String, _ n:Int) -> String {
+    return String(repeating: my_string, count: n)
+}
+print(solution014_1("string", 3))
+// String(repeating: String, count: Int) 생성자에 대해 기억하기
+
+/// 015. 정수부분
+func solution015(_ flo:Double) -> Int {
+    
+    let result = String(flo).split(separator:".").map {String($0)}
+    return Int(result[0]) ?? 0
+}
+print(solution015(0.753))
+print(solution015(124.753))
+
+func solution015_1(_ flo:Double) -> Int {
+    return Int(flo)
+}
+print(solution015_1(0.753))
+print(solution015_1(124.753))
