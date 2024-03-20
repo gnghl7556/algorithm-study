@@ -188,3 +188,10 @@ func solution009_2(_ my_string:String) -> [String] {
 print(solution009("programmers"))
 print(solution009_1("programmers"))
 print(solution009_2("programmers"))
+
+/// 010. 대문자로 바꾸기
+func solution010(_ myString:String) -> String {
+    return myString.uppercased()
+}
+print(solution010("aBcDeFg"))
+
