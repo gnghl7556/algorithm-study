@@ -195,3 +195,9 @@ func solution010(_ myString:String) -> String {
 }
 print(solution010("aBcDeFg"))
 
+/// 011. flag에 따라 다른 값 변환하기
+func solution011(_ a:Int,_ b: Int,_ flag:Bool) -> Int {
+    return flag ? a+b : a-b
+}
+print(solution011(-4, 7, true))
+print(solution011(-4, 7, false))
