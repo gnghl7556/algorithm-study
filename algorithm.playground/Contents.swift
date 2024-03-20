@@ -260,3 +260,10 @@ func solution015_1(_ flo:Double) -> Int {
 }
 print(solution015_1(0.753))
 print(solution015_1(124.753))
+
+/// 016.문자열을 정수로 변환하기
+func solution016(_ n_str:String) -> Int {
+    return Int(n_str) ?? 0
+}
+print(solution016("10"))
+print(solution016("8542"))
