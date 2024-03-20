@@ -230,3 +230,13 @@ func solution013(_ arr1:[Int],_ arr2:[Int]) -> Int{
 print(solution013([49, 13], [70,11,2]))
 print(solution013([100,17,84,1], [55,12,65,36]))
 print(solution013([1,2,3,4,5], [3,3,3,3,3]))
+
+/// 014. 문자열 곱하기
+func solution014(_ my_string:String, _ n:Int) -> String {
+    var resultStr: String = ""
+    for _ in 0..<n {
+        resultStr += my_string
+    }
+    return resultStr
+}
+print(solution014("string", 3))
