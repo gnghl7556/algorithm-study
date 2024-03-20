@@ -172,3 +172,19 @@ func solution008(_ num_list:[Int]) -> Int {
     return result
 }
 print(solution008([3, 4, 5, 2, 5, 4, 6, 7, 3, 7, 2, 2, 1]))
+
+/// 009. 공백으로 구분하기 1
+/// 문자열을 특정 문자가 나올때마다 구분해주는 것
+func solution009(_ my_string: String) -> [String] {
+    let words = my_string.split(separator: " ")
+    return words.map {String($0)}
+}
+func solution009_1(_ my_string:String) -> [String] {
+    return my_string.components(separatedBy: " ")
+}
+func solution009_2(_ my_string:String) -> [String] {
+    return my_string.components(separatedBy: .whitespaces)
+}
+print(solution009("programmers"))
+print(solution009_1("programmers"))
+print(solution009_2("programmers"))
