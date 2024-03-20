@@ -201,3 +201,18 @@ func solution011(_ a:Int,_ b: Int,_ flag:Bool) -> Int {
 }
 print(solution011(-4, 7, true))
 print(solution011(-4, 7, false))
+
+/// 012. 문자열의 뒤의 n글자
+func solution012(_ my_string:String,_ n:Int) -> String{
+    guard n < my_string.count else{
+        return my_string
+    }
+    let index = my_string.index(my_string.startIndex, offsetBy: my_string.count - n)
+    let subString = my_string[index...]
+    return String(subString)
+}
+print(solution012("ProgrammerS123", 19))
+func solution012_1(_ my_string:String,_ n:Int) -> String {
+    return String(my_string.suffix(n))
+}
+print(solution012_1("ProgrammerS123", 19))
