@@ -267,3 +267,9 @@ func solution016(_ n_str:String) -> Int {
 }
 print(solution016("10"))
 print(solution016("8542"))
+
+/// 017.n번째 원소까지
+func solution017(_ num_list:[Int],_ n:Int) -> [Int] {
+    return num_list[..<n].map {Int($0)}
+}
+print(solution017([5,2,1,7,5], 3))
