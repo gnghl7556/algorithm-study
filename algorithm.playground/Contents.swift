@@ -273,3 +273,27 @@ func solution017(_ num_list:[Int],_ n:Int) -> [Int] {
     return num_list[..<n].map {Int($0)}
 }
 print(solution017([5,2,1,7,5], 3))
+
+/// 019. 홀짝에 따른 다른 값 출력하기
+func solution019(_ n:Int) -> Int {
+    // n이 짝수라면, n이하의 짝수들을 모두 더한 값
+    if n % 2 == 0 {
+        let evenNumbers = (0...n).filter { $0 % 2 == 0}
+        return evenNumbers.reduce(0) { $0 + ($1 * $1)}
+    }else {
+        let oddNumbers = (0...n).filter {$0 % 2 != 0}
+        return oddNumbers.reduce(0, +)
+    }
+}
+print(solution019(7))
+print(solution019(10))
+func solution019_1(_ n:Int) -> Int {
+    // n이 짝수라면, n이하의 짝수들을 모두 더한 값
+    if n % 2 == 0 {
+        return stride(from:2, through:n, by:2).reduce(0) {$0 + ($1 * $1)}
+    }else {
+        return stride(from:1, through:n, by: 2).reduce(0, +)
+    }
+}
+print(solution019_1(7))
+print(solution019_1(10))
