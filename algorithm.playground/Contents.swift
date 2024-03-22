@@ -297,3 +297,22 @@ func solution019_1(_ n:Int) -> Int {
 }
 print(solution019_1(7))
 print(solution019_1(10))
+
+func solution020(_ numbers:[Int],_ n:Int) -> Int {
+    var result = 0
+    for element in numbers {
+        result += element
+        if result > n {
+            return result
+        }
+    }
+    return result
+}
+print(solution020([34,5,71,29,100,34], 123))
+print(solution020([58, 44, 27, 10, 100], 139))
+
+func solution020_1(_ numbers:[Int],_ n:Int) -> Int {
+    return numbers.reduce(0) { $0 > n ? $0 : $0 + $1}
+}
+print(solution020_1([34,5,71,29,100,34], 123))
+print(solution020_1([58, 44, 27, 10, 100], 139))
