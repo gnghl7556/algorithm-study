@@ -316,3 +316,10 @@ func solution020_1(_ numbers:[Int],_ n:Int) -> Int {
 }
 print(solution020_1([34,5,71,29,100,34], 123))
 print(solution020_1([58, 44, 27, 10, 100], 139))
+
+func solution021(_ num_list:[Int], _ n:Int) -> Int {
+    return num_list.filter {$0 == n}.isEmpty ? 0 : 1
+}
+print(solution021([15, 98, 23, 2, 15], 20))
+print(solution021([1, 2, 3, 4, 5], 3))
+
