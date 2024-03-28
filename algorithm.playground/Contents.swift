@@ -323,3 +323,8 @@ func solution021(_ num_list:[Int], _ n:Int) -> Int {
 print(solution021([15, 98, 23, 2, 15], 20))
 print(solution021([1, 2, 3, 4, 5], 3))
 
+
+func solution022(_ myString:String) -> String {
+    return myString.lowercased()
+}
+print(solution022("AaBbCcDd"))
